@@ -11,6 +11,8 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import warnings
+warnings.filterwarnings(action="ignore", module="sklearn", message="^internal gelsd")
 
 dataset = pd.read_csv('studentscores.csv')
 X = dataset.iloc[ : ,   : 1 ].values
